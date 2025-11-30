@@ -2,7 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Login</title>
+
     <style>
         body {
             margin: 0;
@@ -13,7 +15,7 @@
             align-items: center;
             font-family: Arial, sans-serif;
 
-            /* Imagen de fondo desde tu carpeta img */
+            /* Fondo de la imagen */
             background-image: url('img/LogoFerremax.jpg');
             background-size: cover;
             background-position: center;
@@ -21,69 +23,42 @@
         }
 
         .login-container {
-            background: rgba(255,255,255,0.85);
+            background: rgba(255, 255, 255, 0.85); 
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.3);
             text-align: center;
             width: 300px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
         }
 
-        label {
-            display: block;
+        input, button {
+            width: 90%;
+            padding: 10px;
             margin-top: 10px;
-            text-align: left;
-        }
-
-        input {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            border-radius: 5px;
-            border: 1px solid #aaa;
+            font-size: 15px;
         }
 
         button {
-            margin-top: 15px;
-            width: 100%;
-            padding: 10px;
-            border: none;
-            background: #0066cc;
-            color: white;
-            font-size: 16px;
-            border-radius: 5px;
             cursor: pointer;
         }
-
-        button:hover {
-            background: #004f99;
-        }
-
-        .error {
-            color: red;
-            margin-top: 10px;
-        }
     </style>
-</head>
 
+</head>
 <body>
 
 <div class="login-container">
     <h2>Login</h2>
 
-    <form method="post" action="LoginServlet">
-        <label>Usuario:</label>
-        <input type="text" name="usuario" required/>
-
-        <label>Clave:</label>
-        <input type="password" name="clave" required/>
-
+    <form action="LoginServlet" method="post">
+        <input type="text" name="usuario" placeholder="Usuario" required><br>
+        <input type="password" name="clave" placeholder="Clave" required><br>
         <button type="submit">Entrar</button>
     </form>
 
-    <c:if test="${not empty error}">
-        <p class="error">${error}</p>
-    </c:if>
+    <% if (request.getAttribute("error") != null) { %>
+        <p style="color:red"><%= request.getAttribute("error") %></p>
+    <% } %>
+
 </div>
 
 </body>
