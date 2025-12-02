@@ -4,31 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+        <link rel="stylesheet" href="style.css">
+
 
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-
-            /* Fondo de la imagen */
-            background-image: url('img/LogoFerremax.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+        
 
         .login-container {
-            background: rgba(255, 255, 255, 0.85); 
+            background: #ffffff;
             padding: 30px;
-            border-radius: 10px;
+            min-width: 350px;
+            margin-right: auto;
+            border-radius: 0px;
             text-align: center;
-            width: 300px;
+            width: var(--login-width);
+            height: -webkit-fill-available;
             box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
         }
 
         input, button {
@@ -39,7 +32,50 @@
         }
 
         button {
-            cursor: pointer;
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.button:hover,
+.button:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.button:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.button:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+
         }
     </style>
 
@@ -58,6 +94,10 @@
     <% if (request.getAttribute("error") != null) { %>
         <p style="color:red"><%= request.getAttribute("error") %></p>
     <% } %>
+
+</div>
+    <div class="img-container" ></div>
+
 
 </div>
 

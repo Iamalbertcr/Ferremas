@@ -12,29 +12,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Panel</title>
+    <link rel="stylesheet" href="style.css">
 
     <style>
 
         /* ===============================
                 FONDO COMPLETO
         =============================== */
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Segoe UI', sans-serif;
-
-            background-image: url('img/LogoFerremax.jpg');
-            background-size: cover;
-            background-position: center;
-        }
+     
 
         /* ===============================
                  CONTENEDOR PANEL
         =============================== */
+
+        body{
+            background-image: url("img/ferremax3.png");
+            background-size: 100% 100%;  /* Se estira EN TODAS DIRECCIONES aunque se deforme */
+            background-repeat: no-repeat;
+        }
         .panel {
             background: rgba(255, 255, 255, 0.12);
             padding: 40px;
