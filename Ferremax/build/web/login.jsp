@@ -13,6 +13,7 @@
         .login-container {
             background: #ffffff;
             padding: 30px;
+            min-width: 350px;
             margin-right: auto;
             border-radius: 0px;
             text-align: center;
@@ -21,6 +22,7 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.5);
             position: relative;
             z-index: 1;
+            
         }
 
         input, button {
@@ -52,8 +54,7 @@
     <% } %>
 
 </div>
-<div id="imgb"></div>
-<img class=image src="img/.jpg" alt="">
+<div class="img-container"></div>
 
 </div>
 
