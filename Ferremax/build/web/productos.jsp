@@ -7,25 +7,17 @@
 <html>
 <head>
     <title>Productos</title>
-    <style>
-        body { font-family: Arial; background: #f0f0f0; padding: 20px; }
-        table { width: 100%; border-collapse: collapse; background: white; }
-        th, td { padding: 10px; border: 1px solid #ddd; text-align: center; }
-        th { background: #013abb; color: white; }
-        a.btn {
-            padding: 8px 12px; 
-            background: #007bff; 
-            color: white; 
-            text-decoration: none; 
-            border-radius: 6px;
-        }
-        a.btn-danger { background: red; }
-        a.btn-add { background: green; margin-bottom: 15px; display: inline-block; }
-    </style>
+    <link rel="stylesheet" href="ClieProdStyle.css">
+    
+    
 </head>
 <body>
 
 <h2>Listado de Productos</h2>
+<a class="volverAlpanel" href="panel.jsp"></a> <!-- Este es el volver al panel pero con icono 
+                                                                para que salga al principio de la pagina -->
+
+<br>
 
 <a class="btn btn-add" href="ProductoServlet?accion=nuevo">+ Agregar Producto</a>
 
