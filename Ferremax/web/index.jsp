@@ -20,7 +20,7 @@
 <body>
 
 <div class="panel">
-    <h2>Bienvenido Ferremax</h2>
+    <h2>Bienvenido a Ferremax</h2>
 
     <div class="menu-grid">
         <a href="ProductoServlet?accion=listar">📦 Productos</a>

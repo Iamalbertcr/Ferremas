@@ -11,7 +11,7 @@
         body { font-family: Arial; background: #f0f0f0; padding: 20px; }
         table { width: 100%; border-collapse: collapse; background: white; }
         th, td { padding: 10px; border: 1px solid #ddd; text-align: center; }
-        th { background: #0056b3; color: white; }
+        th { background: #013abb; color: white; }
         a.btn {
             padding: 8px 12px; 
             background: #007bff; 
